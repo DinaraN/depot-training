@@ -50,7 +50,7 @@ class ProductTest < ActiveSupport::TestCase
     price: 1,
     image_url: "fred.gif")
     assert product.invalid?
-    assert_equal ["has already been taken"], product.errors[:title]
+    assert_equal ["is not uniq"], product.errors[:title]
   end
 
 
